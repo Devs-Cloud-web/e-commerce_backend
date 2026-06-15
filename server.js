@@ -32,7 +32,7 @@ app.use(helmet());
 app.use("/api/auth",authRoutes);
 app.use("/api/products",productRoutes);
 app.use("/api/cart",cartRoutes);
-app.use("/api/order",orderRoutes);
+app.use("/api/orders",orderRoutes);
 
 
 const PORT = process.env.PORT || 5000

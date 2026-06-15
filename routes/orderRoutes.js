@@ -12,7 +12,7 @@ const router = express.Router();
 router.post("/placeorder",protect,asyncHandler(placeorder)); //add verifyPayment before placeorder;
 router.get("/history",protect,asyncHandler(orderHistory));
 router.get("/allorders",protect,admin,asyncHandler(allOrders));
-router.post("/statusupdate",protect,admin,asyncHandler(updateOrderStatus));
+router.put("/statusupdate",protect,admin,asyncHandler(updateOrderStatus));
 router.post("/payment",protect,validate(placeOrderSchema),asyncHandler(createPaymentOrder));
 
 export default router;
