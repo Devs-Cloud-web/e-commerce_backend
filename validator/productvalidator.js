@@ -14,3 +14,23 @@ export const addproductSchema = (data) => {
 
     return { error: null };
 };
+
+export const updatePriceSchema = (schema) => (data) => {
+
+    if(!data.productId){
+        return { error: "Product ID is required" };
+    }
+
+    if(data.price == null || data.price <= 0){
+        return { error: "Price must be greater than 0" };
+    }
+
+};
+
+export const deleteItemSchema = (schema) => (data) => {
+
+    if(!data.productId){
+        return { error: "Product ID is required" };
+    }
+    
+};
