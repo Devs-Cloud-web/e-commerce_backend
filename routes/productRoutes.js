@@ -11,6 +11,6 @@ const router = express.Router();
 router.get("/info",asyncHandler(getproducts));
 router.post("/add",protect,admin,validate(addproductSchema),asyncHandler(addproduct));
 router.put("/update",protect,admin,validate(updatePriceSchema),asyncHandler(updateprice));
-router.post("/delete",protect,admin.validate(deleteItemSchema),asyncHandler(deleteproduct));
+router.post("/delete",protect,admin,validate(deleteItemSchema),asyncHandler(deleteproduct));
 
 export default router;
